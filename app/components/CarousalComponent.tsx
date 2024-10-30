@@ -100,7 +100,7 @@ const CarousalComponent: React.FC<CarousalProps> = ({
             maskSize: "100%",
             transition: "background-position 0.8s ",
             // animation: "",
-            animation: "shake 0.6s  ease-in-out",
+            // animation: "shake 0.3s  ease-in-out",
           }}
         ></div>
       </div>
