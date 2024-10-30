@@ -2,20 +2,196 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@keyframes backgroundSlide {
+  0% {
+    background-position: 0 0, 0 0;
+    transform: rotate(1deg);
+  }
+  0.20% {
+    background-position: 0 0, 0 0;
+    transform: rotate(-1deg);
+  }
+  0.40% {
+    background-position: 0 0, 0 0;
+    transform: rotate(0deg);
+  }
+  30% {
+    background-position: 0 0, 0 0;
+    transform: rotate(0deg);
+  }
+  31.33% {
+    background-position: 0 0, 0 0;
+    transform: rotate(3deg);
+  }
+  31.66% {
+    background-position: 0 0, 0 0;
+    transform: rotate(-2deg);
+  }
+  31.99% {
+    background-position: 0 0, 0 0;
+    transform: rotate(2deg);
+  }
+  32.33% {
+    background-position: 0 0, 0 0;
+    transform: rotate(-2deg);
+  }
+  32.66% {
+    background-position: 0 0, 0 0;
+    transform: rotate(1deg);
+  }
+  32.99% {
+    background-position: 0 0, 0 0;
+    transform: rotate(-2deg);
+  }
+  33.33% {
+    background-position: 0 0, 0 0;
+    transform: rotate(2deg);
+  }
+  33.66% {
+    background-position: 0 0, 0 0;
+    transform: rotate(-1deg);
+  }
+  33.99% {
+    background-position: 0 0, 0 0;
+    transform: rotate(1deg);
+  }
+  34.33% {
+    background-position: 0 0, 0 0;
+    transform: rotate(0deg);
+  }
+  35.66% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(0deg);
+  }
+  64% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(0deg);
+  }
+  65% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(2deg);
+  }
+  65.33% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(-3deg);
+  }
+  65.66% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(2deg);
+  }
+  65.99% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(-3deg);
+  }
+  66.33% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(2deg);
+  }
+  66.66% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(-2deg);
+  }
+  67.33% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(2deg);
+  }
+  67.66% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(-2deg);
+  }
+  67.99% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(0deg);
+  }
+  68.33% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(1deg);
+  }
+  68.66% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(-1deg);
+  }
+  68.99% {
+    background-position: 0 0, -295px 0;
+    transform: rotate(1deg);
+  }
+  69.99% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(-1deg);
+  }
+  94% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(0deg);
+  }
+  95% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(2deg);
+  }
+  95.33% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(-3deg);
+  }
+  95.66% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(2deg);
+  }
+  95.99% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(-3deg);
+  }
+  96.33% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(2deg);
+  }
+  96.66% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(-2deg);
+  }
+  97.33% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(2deg);
+  }
+  97.66% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(-2deg);
+  }
+  97.99% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(0deg);
+  }
+  98.33% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(1deg);
+  }
+  98.66% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(-1deg);
+  }
+  98.99% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(1deg);
+  }
+  99.99% {
+    background-position: 0 0, -595px 0;
+    transform: rotate(1deg);
+  }
+  100% {
+    background-position: 0 0, 0px 0;
+    transform: rotate(1deg);
+  }
+}
+
+/* :root {
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
