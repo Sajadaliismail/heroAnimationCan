@@ -2,7 +2,6 @@
 import Image from "next/image";
 import FloatingComponent from "./FloatingComponent";
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
 
 export interface FloatingData {
   imageSrc: string;

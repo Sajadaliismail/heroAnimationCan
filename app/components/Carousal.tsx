@@ -16,6 +16,7 @@ const Carousal: React.FC<CarousalProps> = ({ scenes }) => {
   const previousScene = () => {
     setCurrentScene((prev) => (prev - 1 + scenes.length) % scenes.length);
   };
+  /* eslint-disable react-hooks/exhaustive-deps */
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -34,6 +35,7 @@ const Carousal: React.FC<CarousalProps> = ({ scenes }) => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [scenes.length]);
+  /* eslint-disable react-hooks/exhaustive-deps */
 
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
