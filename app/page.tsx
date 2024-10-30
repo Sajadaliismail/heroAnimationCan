@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Carousal from "./components/Carousal";
 import Apple from "./components/AppleComponent";
@@ -6,7 +5,7 @@ import StrawBerry from "./components/StrawBeryCompnent";
 import Orange from "./components/OrangeComponent";
 
 export default function Home() {
-  const arr = [<StrawBerry />, <Orange />, <Apple />];
+  const arr = [<StrawBerry key={1} />, <Orange key={2} />, <Apple key={3} />];
   return (
     <div className="h-[100vh] overflow-hidden">
       <main className="">
