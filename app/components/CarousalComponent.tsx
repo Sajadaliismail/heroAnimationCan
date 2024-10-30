@@ -19,7 +19,7 @@ interface CarousalProps {
   canImage: string;
   FruitImage: string;
   content: string;
-
+  labelPos: string;
   gradient: string;
 }
 
@@ -27,13 +27,13 @@ const CarousalComponent: React.FC<CarousalProps> = ({
   floatingData,
   FruitImage,
   canImage,
-
+  labelPos,
   content,
   gradient,
 }) => {
   return (
     <div
-      className="w-[100vw] h-[100vh] overflow-hidden flex"
+      className="abc w-[100vw] h-[100vh] overflow-hidden flex"
       style={{ background: gradient }}
     >
       {floatingData.map((data, index) => (
@@ -63,6 +63,7 @@ const CarousalComponent: React.FC<CarousalProps> = ({
       />
 
       <div
+        className="def"
         style={{
           position: "absolute",
           top: "30%",
@@ -73,7 +74,7 @@ const CarousalComponent: React.FC<CarousalProps> = ({
           className={`rotating`}
           style={{
             backgroundImage: `url("/sodacan.png"), url("${canImage}")`,
-            backgroundPosition: `0 0, 0 0`,
+            backgroundPosition: `0 0, ${labelPos} 0`,
             backgroundSize: "cover, auto 126%",
             backgroundRepeat: "no-repeat",
             backgroundBlendMode: "multiply",
@@ -82,8 +83,8 @@ const CarousalComponent: React.FC<CarousalProps> = ({
             maskImage: 'url("/sodacan.png")',
             maskSize: "100%",
             transition: "background-position 0.8s",
-            animation:
-              "backgroundSlide 15.6s infinite ease-in-out,shake 0.5s infinite",
+            animation: "shake 15s",
+            // animation: "backgroundSlide 15.6s infinite ease-in-out",
           }}
         ></div>
       </div>

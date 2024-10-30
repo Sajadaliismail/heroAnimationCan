@@ -53,7 +53,7 @@ const FloatingComponent: React.FC<FloatingComponentProps> = ({
         floatRef.current,
         {
           duration: 10,
-          ease: "power1.inOut",
+          ease: "power4.inOut",
           scale: scale,
         },
         0

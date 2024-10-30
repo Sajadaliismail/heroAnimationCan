@@ -89,6 +89,7 @@ const Orange = () => {
   return (
     <div>
       <CarousalComponent
+        labelPos="-295px"
         FruitImage="soda21.png"
         canImage="/Labels.png"
         floatingData={floatingData}

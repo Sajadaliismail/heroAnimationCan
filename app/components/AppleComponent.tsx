@@ -83,8 +83,9 @@ const Apple = () => {
   ];
 
   return (
-    <div>
+    <div className="inner">
       <CarousalComponent
+        labelPos="-595px"
         FruitImage="soda6.png"
         canImage="/Labels.png"
         floatingData={floatingData}

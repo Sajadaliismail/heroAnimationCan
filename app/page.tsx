@@ -18,7 +18,7 @@ export default function Home() {
           </nav>
         </header>
         <div className="h-[100vh]">
-          <Carousal scenes={arr} duration={5000} />
+          <Carousal scenes={arr} />
         </div>
       </main>
     </div>

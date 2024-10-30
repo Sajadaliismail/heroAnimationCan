@@ -89,6 +89,7 @@ const StrawBerry = () => {
   return (
     <div>
       <CarousalComponent
+        labelPos="0"
         FruitImage="soda27.png"
         canImage="/Labels.png"
         floatingData={floatingData}
