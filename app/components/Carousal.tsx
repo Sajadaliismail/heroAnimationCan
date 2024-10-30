@@ -7,7 +7,7 @@ interface CarousalProps {
 
 const Carousal: React.FC<CarousalProps> = ({ scenes }) => {
   const [currentScene, setCurrentScene] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true); // State to manage autoplay
+  const [autoPlay, setAutoPlay] = useState(true);
 
   const nextScene = () => {
     setCurrentScene((prev) => (prev + 1) % scenes.length);
@@ -53,16 +53,8 @@ const Carousal: React.FC<CarousalProps> = ({ scenes }) => {
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      {scenes.map((scene, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentScene ? "animate-can opacity-100 " : "opacity-0"
-          }`}
-        >
-          {scene}
-        </div>
-      ))}
+      {scenes[currentScene]}
+
       <button
         onClick={() => {
           previousScene();

@@ -89,12 +89,13 @@ const StrawBerry = () => {
   return (
     <div>
       <CarousalComponent
-        labelPos="0"
+        labelPos="0px"
         FruitImage="soda27.png"
         canImage="/Labels.png"
         floatingData={floatingData}
         gradient=" radial-gradient(circle, #ffebee, #ff6b6b, #e63946, #b71c1c)"
         content="STRAWBERRY"
+        prevLabel="0px"
       />
     </div>
   );

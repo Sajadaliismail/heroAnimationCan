@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import FloatingComponent from "./FloatingComponent";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
 export interface FloatingData {
   imageSrc: string;
@@ -21,6 +23,7 @@ interface CarousalProps {
   content: string;
   labelPos: string;
   gradient: string;
+  prevLabel: string;
 }
 
 const CarousalComponent: React.FC<CarousalProps> = ({
@@ -30,7 +33,18 @@ const CarousalComponent: React.FC<CarousalProps> = ({
   labelPos,
   content,
   gradient,
+  prevLabel,
 }) => {
+  const floatRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState(prevLabel);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setPosition(labelPos);
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  }, [labelPos, prevLabel]);
+
   return (
     <div
       className="abc w-[100vw] h-[100vh] overflow-hidden flex"
@@ -63,18 +77,21 @@ const CarousalComponent: React.FC<CarousalProps> = ({
       />
 
       <div
+        ref={floatRef}
         className="def"
-        style={{
-          position: "absolute",
-          top: "30%",
-          left: "45%",
-        }}
+        style={
+          {
+            position: "absolute",
+            top: "30%",
+            left: "45%",
+          } as React.CSSProperties
+        }
       >
         <div
           className={`rotating`}
           style={{
             backgroundImage: `url("/sodacan.png"), url("${canImage}")`,
-            backgroundPosition: `0 0, ${labelPos} 0`,
+            backgroundPosition: `0 0, ${position} 0px`,
             backgroundSize: "cover, auto 126%",
             backgroundRepeat: "no-repeat",
             backgroundBlendMode: "multiply",
@@ -82,9 +99,9 @@ const CarousalComponent: React.FC<CarousalProps> = ({
             aspectRatio: "3 / 5",
             maskImage: 'url("/sodacan.png")',
             maskSize: "100%",
-            transition: "background-position 0.8s",
-            animation: "shake 15s",
-            // animation: "backgroundSlide 15.6s infinite ease-in-out",
+            transition: "background-position 0.8s ",
+            // animation: "",
+            animation: "shake 0.6s  ease-in-out",
           }}
         ></div>
       </div>

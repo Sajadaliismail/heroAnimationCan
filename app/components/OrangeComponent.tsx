@@ -95,6 +95,7 @@ const Orange = () => {
         floatingData={floatingData}
         gradient=" radial-gradient(circle, #fff3e0, #ffa726, #fb8c00, #ef6c00)"
         content="ORANGE"
+        prevLabel="0px"
       />
     </div>
   );
