@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import FloatingComponent from "./FloatingComponent";
-import { useEffect, useRef, useState } from "react";
 
 export interface FloatingData {
   imageSrc: string;
