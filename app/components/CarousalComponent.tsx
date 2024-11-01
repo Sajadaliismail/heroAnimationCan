@@ -17,33 +17,17 @@ export interface FloatingData {
 
 interface CarousalProps {
   floatingData: FloatingData[];
-  canImage: string;
   FruitImage: string;
   content: string;
-  labelPos: string;
   gradient: string;
-  prevLabel: string;
 }
 
 const CarousalComponent: React.FC<CarousalProps> = ({
   floatingData,
   FruitImage,
-  canImage,
-  labelPos,
   content,
   gradient,
-  prevLabel,
 }) => {
-  // const floatRef = useRef<HTMLDivElement>(null);
-  // const [position, setPosition] = useState(prevLabel);
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setPosition(labelPos);
-  //   }, 50);
-
-  //   return () => clearTimeout(timeout);
-  // }, [labelPos, prevLabel]);
-
   return (
     <div
       className="abc w-[100vw] h-[100vh] overflow-hidden flex"
@@ -74,36 +58,6 @@ const CarousalComponent: React.FC<CarousalProps> = ({
         height={400}
         alt="apple"
       />
-
-      {/* <div
-        ref={floatRef}
-        className="def"
-        style={
-          {
-            position: "absolute",
-            top: "30%",
-            left: "45%",
-          } as React.CSSProperties
-        }
-      >
-        <div
-          className={`rotating`}
-          style={{
-            backgroundImage: `url("/sodacan.png"), url("${canImage}")`,
-            backgroundPosition: `0 0, ${position} 0px`,
-            backgroundSize: "cover, auto 126%",
-            backgroundRepeat: "no-repeat",
-            backgroundBlendMode: "multiply",
-            width: "300px",
-            aspectRatio: "3 / 5",
-            maskImage: 'url("/sodacan.png")',
-            maskSize: "100%",
-            transition: "background-position 0.8s ",
-            // animation: "",
-            // animation: "shake 0.3s  ease-in-out",
-          }}
-        ></div> */}
-      {/* </div> */}
     </div>
   );
 };
