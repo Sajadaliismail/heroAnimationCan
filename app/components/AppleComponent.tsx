@@ -86,12 +86,12 @@ const Apple = () => {
     <div className="inner">
       <CarousalComponent
         labelPos="-595px"
+        prevLabel="-295px"
         FruitImage="soda6.png"
         canImage="/Labels.png"
         floatingData={floatingData}
         gradient=" radial-gradient(circle, #e0f2f1, #68d391, #2f855a, #22543d)"
         content="APPLE"
-        prevLabel="-295px"
       />
     </div>
   );

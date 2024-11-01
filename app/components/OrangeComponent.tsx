@@ -90,12 +90,12 @@ const Orange = () => {
     <div>
       <CarousalComponent
         labelPos="-295px"
+        prevLabel="0px"
         FruitImage="soda21.png"
         canImage="/Labels.png"
         floatingData={floatingData}
         gradient=" radial-gradient(circle, #fff3e0, #ffa726, #fb8c00, #ef6c00)"
         content="ORANGE"
-        prevLabel="0px"
       />
     </div>
   );

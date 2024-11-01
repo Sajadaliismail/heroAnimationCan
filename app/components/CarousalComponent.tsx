@@ -34,15 +34,15 @@ const CarousalComponent: React.FC<CarousalProps> = ({
   gradient,
   prevLabel,
 }) => {
-  const floatRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState(prevLabel);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setPosition(labelPos);
-    }, 50);
+  // const floatRef = useRef<HTMLDivElement>(null);
+  // const [position, setPosition] = useState(prevLabel);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setPosition(labelPos);
+  //   }, 50);
 
-    return () => clearTimeout(timeout);
-  }, [labelPos, prevLabel]);
+  //   return () => clearTimeout(timeout);
+  // }, [labelPos, prevLabel]);
 
   return (
     <div
@@ -63,7 +63,7 @@ const CarousalComponent: React.FC<CarousalProps> = ({
           width={data?.width}
         />
       ))}
-      <h1 className="mx-auto my-auto text-[200px] font-extrabold text-white">
+      <h1 className="mx-auto my-auto text-[200px] font-extrabold text-white ease-in">
         {content}
       </h1>
 
@@ -75,7 +75,7 @@ const CarousalComponent: React.FC<CarousalProps> = ({
         alt="apple"
       />
 
-      <div
+      {/* <div
         ref={floatRef}
         className="def"
         style={
@@ -102,8 +102,8 @@ const CarousalComponent: React.FC<CarousalProps> = ({
             // animation: "",
             // animation: "shake 0.3s  ease-in-out",
           }}
-        ></div>
-      </div>
+        ></div> */}
+      {/* </div> */}
     </div>
   );
 };
