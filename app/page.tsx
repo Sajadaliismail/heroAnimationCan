@@ -7,8 +7,8 @@ import Orange from "./components/OrangeComponent";
 export default function Home() {
   const arr = [
     { jsx: <StrawBerry key={1} />, CurrLabel: 0 },
-    { jsx: <Orange key={2} />, CurrLabel: -295 },
-    { jsx: <Apple key={3} />, CurrLabel: -592 },
+    { jsx: <Orange key={2} />, CurrLabel: -310 },
+    { jsx: <Apple key={3} />, CurrLabel: -622 },
   ];
   return (
     <div className="h-[100vh] overflow-hidden">

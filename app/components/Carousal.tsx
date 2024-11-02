@@ -91,7 +91,7 @@ const Carousal: React.FC<CarousalProps> = ({ scenes }) => {
             backgroundRepeat: "repeat-x",
             backgroundBlendMode: "multiply",
             width: "300px",
-            aspectRatio: "3 / 5",
+            aspectRatio: "3 / 5.25",
             maskImage: 'url("/sodacan.png")',
             maskSize: "100%",
             transition:
